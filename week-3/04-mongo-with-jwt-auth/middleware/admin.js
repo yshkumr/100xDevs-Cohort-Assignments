@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const jwtPassword = "shhhhh";
 
-// Middleware for handling auth
+// Middleware for handling authentication
 function adminMiddleware(req, res, next) {
   const token = req.headers.authorization;
 
