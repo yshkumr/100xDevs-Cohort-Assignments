@@ -6,7 +6,6 @@ const jwt = require("jsonwebtoken");
 const jwtPassword = "shhhhh";
 
 // Admin Routes
-<<<<<<< HEAD
 router.post("/signup", async (req, res) => {
   const { username, password } = req.body;
 
@@ -78,22 +77,6 @@ router.get("/courses", adminMiddleware, async (req, res) => {
   res.status(200).json({
     courses: courses,
   });
-=======
-router.post('/signup', (req, res) => {
-    // Implement admin signup logic
-});
-
-router.post('/signin', (req, res) => {
-    // Implement admin signup logic
-});
-
-router.post('/courses', adminMiddleware, (req, res) => {
-    // Implement course creation logic
-});
-
-router.get('/courses', adminMiddleware, (req, res) => {
-    // Implement fetching all courses logic
->>>>>>> upstream/master
 });
 
 module.exports = router;
