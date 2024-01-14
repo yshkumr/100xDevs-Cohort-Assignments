@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://admin:wow786wow@cluster0.ribqhkj.mongodb.net/cards"
-);
+mongoose.connect("MONGODB_URL");
 
 const CardSchema = new mongoose.Schema({
   name: String,
