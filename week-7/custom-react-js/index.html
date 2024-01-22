@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      const elementObj = {
+        type: "a",
+        props: {
+          href: "https://www.google.com",
+          children: "Click me to Visit Google",
+        },
+      };
+
+      function createElement(reactElement) {
+        const { type, props } = reactElement;
+
+        const htmlElement = document.createElement(type);
+        htmlElement.innerText = props.children;
+        htmlElement.setAttribute("href", props.href);
+
+        return htmlElement;
+      }
+
+      function customRender(obj, path) {
+        const container = document.getElementById(path);
+        const element = createElement(obj);
+
+        container.appendChild(element);
+      }
+
+      customRender(elementObj, "root");
+    </script>
+  </body>
+</html>

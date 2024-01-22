@@ -1,0 +1,48 @@
+.profile {
+  width: 300px;
+  line-height: 15%;
+  border: 1px solid rgba(21, 21, 21, 0.481);
+  font-family: cursive;
+}
+
+.profile-pic {
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: linear-gradient(cyan 50%, white 50%);
+}
+
+.profile-pic img {
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+.name {
+  font-weight: 700;
+}
+span {
+  color: rgba(21, 21, 21, 0.481);
+}
+.city {
+  margin: 0;
+  margin-top: 10px;
+  color: rgba(21, 21, 21, 0.481);
+  font-weight: 600;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 25px;
+}
+.divider {
+  border-top: 2px solid rgba(21, 21, 21, 0.296);
+}
+
+.footer p {
+  font-size: 11px;
+  color: rgba(21, 21, 21, 0.481);
+}

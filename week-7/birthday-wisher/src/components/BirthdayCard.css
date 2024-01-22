@@ -1,0 +1,25 @@
+.bday-card {
+  color: rgb(19, 11, 11);
+  background-color: #b6ffd0;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.bday-card h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.bday-card p {
+  font-size: 16px;
+}

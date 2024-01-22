@@ -1,0 +1,19 @@
+.otp-div {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.otp-div h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.otp-inps {
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 19px;
+  margin-left: 10px;
+}

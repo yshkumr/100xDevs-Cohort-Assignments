@@ -1,0 +1,9 @@
+.profile-cards {
+  display: flex;
+  justify-content: space-between;
+  max-width: 85%;
+  margin: auto;
+  margin-top: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}

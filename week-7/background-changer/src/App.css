@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btns {
+  padding: 20px;
+  width: max-content;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
