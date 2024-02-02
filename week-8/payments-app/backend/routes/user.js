@@ -112,8 +112,11 @@ router.put("/updateuser", authMiddleware, async (req, res) => {
 
 router.get("/bulk", authMiddleware, async (req, res) => {
   const { filter } = req.query || "";
+  const loggedInUser = req.userId;
 
   const users = await User.find({
+    _id: { $ne: loggedInUser },
+
     $or: [
       {
         firstName: {

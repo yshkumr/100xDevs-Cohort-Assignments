@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import UserProfile from "../components/UserProfile";
 import Users from "../components/Users";
+import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [user, setUser] = useState({});
   const [balance, setBalance] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getUser = async () => {
@@ -34,6 +38,13 @@ const Dashboard = () => {
             name={"Hello, " + user.firstName}
             letter={firstName[0]?.toUpperCase()}
             className={"flex items-center gap-3 flex-row"}
+          />
+          <Button
+            label={"Log Out"}
+            onClick={() => {
+              localStorage.removeItem("token");
+              navigate("/signin");
+            }}
           />
         </div>
       </div>
