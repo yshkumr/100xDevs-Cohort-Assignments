@@ -6,16 +6,18 @@ import { useNavigate } from "react-router-dom";
 import InputBox from "./InputBox";
 import UserProfile from "./UserProfile";
 import Button from "./Button";
+import useDebounce from "../hooks/useDebounce";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [filter, setFilter] = useState("");
+  const debouncedValue = useDebounce(filter, 300);
 
   const navigate = useNavigate();
 
   const loadUsers = async () => {
     const response = await axios.get(
-      "http://localhost:3000/api/v1/user/bulk?filter=" + filter,
+      "http://localhost:3000/api/v1/user/bulk?filter=" + debouncedValue,
       {
         headers: {
           Authorization: localStorage.getItem("token"),
@@ -28,7 +30,7 @@ const Users = () => {
 
   useEffect(() => {
     loadUsers();
-  }, [filter]);
+  }, [debouncedValue]);
 
   return (
     <div className="max-w-[95%] mx-auto ">
